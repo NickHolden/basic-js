@@ -17,9 +17,9 @@
       // Write a function that displays the appropriate error message(s) if a field is left blank.  Make sure the form action is not performed if either field is blank.
         var nameElement = document.querySelector("#name");
         var addressElement = document.querySelector("#addr");
-        
-        
-        
+         
+        document.querySelector("#nameError").style.display = "none";
+        document.querySelector("#addressError").style.display = "none";
         
         if (nameElement.value == "") {
             document.querySelector("#nameError").style.display = "flex";
@@ -27,7 +27,6 @@
         if (addressElement.value == "") {
             document.querySelector("#addressError").style.display = "flex";
         }
-        
         if (nameElement.value != "" && addressElement.value != "") {
             return true;
         }
